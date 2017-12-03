@@ -5,10 +5,10 @@ var score = 0;
 
 
 if (score < match) {
-	var oneC = Math.floor(Math.random() * 11 + 1);
-	var twoC = Math.floor(Math.random() * 11 + 1);
-	var threeC = Math.floor(Math.random() * 11 + 1);
-	var fourC = Math.floor(Math.random() * 11 + 1);
+	var oneC = Math.ceil(Math.random() * 12);
+	var twoC = Math.ceil(Math.random() * 12);
+	var threeC = Math.ceil(Math.random() * 12);
+	var fourC = Math.ceil(Math.random() * 12);
 	
 	$("#one").on("click", function(){
 		score = score + oneC;
