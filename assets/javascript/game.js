@@ -5,32 +5,32 @@ var score = 0;
 
 
 if (score < match) {
-	var oneC = Math.ceil(Math.random() * 12);
-	var twoC = Math.ceil(Math.random() * 12);
-	var threeC = Math.ceil(Math.random() * 12);
-	var fourC = Math.ceil(Math.random() * 12);
+	var greenC = Math.ceil(Math.random() * 12);
+	var blueC = Math.ceil(Math.random() * 12);
+	var diaC = Math.ceil(Math.random() * 12);
+	var redC = Math.ceil(Math.random() * 12);
 	
-	$("#one").on("click", function(){
-		score = score + oneC;
-		alert(`You scored ${oneC} points`);
+	$("#green").on("click", function(){
+		score = score + greenC;
+		alert(`You scored ${greenC} points`);
 	}
 	);
 
-	$("#two").on("click", function(){
-		score = score + twoC;
-		alert(`You scored ${twoC} points`);
+	$("#blue").on("click", function(){
+		score = score + blueC;
+		alert(`You scored ${blueC} points`);
 	}
 	);
 
-	$("#three").on("click", function(){
-		score = score + threeC;
-		alert(`You scored ${threeC} points`);
+	$("#diamond").on("click", function(){
+		score = score + diaC;
+		alert(`You scored ${diaC} points`);
 	}
 	);
 
-	$("#four").on("click", function(){
-		score = score + fourC;
-		alert(`You scored ${fourC} points`);
+	$("#red").on("click", function(){
+		score = score + redC;
+		alert(`You scored ${redC} points`);
 	}
 	);
 

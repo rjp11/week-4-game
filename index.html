@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Crystals Collector Game</title>
-	<style type="text/css" src="assests/css/reset.css"></style>
-	<style type="text/css" src="assets/css/style.css"></style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	
 </head>
+
 <body>
 
-	<div id="body">
+	<div class="container-fluid">
 
-	<h1>Crystals Collector game</h1>
-	<p>Click on the images to attempt to match the total</p>
-
-	<div id="one">
-		<h3>One</h3>
-	</div>
-
-	<div id="two">
-		<h3>Two</h3>
-	</div>
-
-	<div id="three">
-		<h3>Three</h3>
-	</div>
-
-	<div id="four">
-		<h3>Four</h3>
-	</div>
-
-	<div id="match">
-		<h2>0</h2>
-	</div>
-
-	<div id="score"></div>
+		<h1>Crystals Collector Game</h1>
+		<p>Click on the images to attempt to match the total</p>
 
 
-	<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous">
-	</script>
+		<div class="row crystals">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img id="green" src="assets/images/green.png" alt="green crystal">
+			</div>
 
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img id="blue" src="assets/images/blue.png" alt="blue crystal">
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img id="diamond" src="assets/images/diamond.png" alt="diamond crystal">
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img id="red" src="assets/images/red.png" alt="ruby crystal">
+			</div>
+
+
+		</div>
+
+		<div id="match">
+			<h2>0</h2>
+		</div>
+
+		<div id="score">
+			<h2>0</h2>
+		</div>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		    crossorigin="anonymous">
+		</script>
+
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 	</div>
 </body>
+
 </html>
