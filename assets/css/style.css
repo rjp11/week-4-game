@@ -3,6 +3,10 @@
 	max-width: 200px;
 }
 
-* {
-	background: gray;
+.crystals img:hover {
+	opacity: 0.5;
+}
+
+h1, h2, h3, h4, h5, p, span {
+	font-family: 'Michroma', sans-serif;
 }

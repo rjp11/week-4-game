@@ -1,46 +1,58 @@
 //linked to index.html
-var match = Math.floor(Math.random() * 90 + 36);
-console.log(match);
-var score = 0;
+var score;
+var crystal = ["green", "blue", "diamond", "red"];
+var match;
+var crystalValue = [];
+var wins=0;
+var losses=0;
 
-
-if (score < match) {
-	var greenC = Math.ceil(Math.random() * 12);
-	var blueC = Math.ceil(Math.random() * 12);
-	var diaC = Math.ceil(Math.random() * 12);
-	var redC = Math.ceil(Math.random() * 12);
-	
-	$("#green").on("click", function(){
-		score = score + greenC;
-		alert(`You scored ${greenC} points`);
+function reset() {
+	match = Math.floor(Math.random() * 90 + 36);
+	$("#match").text(match);
+	score = 0;
+	for (i = 0; i < crystal.length; i++) {
+		crystalValue[i] = Math.ceil(Math.random() * 12);
 	}
-	);
-
-	$("#blue").on("click", function(){
-		score = score + blueC;
-		alert(`You scored ${blueC} points`);
-	}
-	);
-
-	$("#diamond").on("click", function(){
-		score = score + diaC;
-		alert(`You scored ${diaC} points`);
-	}
-	);
-
-	$("#red").on("click", function(){
-		score = score + redC;
-		alert(`You scored ${redC} points`);
-	}
-	);
-
-	$("#body").on("click",console.log(score));
-
-} else if (score === match) {
-
-	console.log(score);
-
-} else {
-	console.log(match);
-
+	console.log(crystalValue);
 };
+
+$(document).ready(function () {
+	if (score < match) {
+	$("#green").on("click", function () {
+		score += crystalValue[0];
+		$("#score").text(score);
+
+	});
+
+	$("#blue").on("click", function () {
+		score += crystalValue[1];
+		$("#score").text(score);
+	});
+
+	$("#diamond").on("click", function () {
+		score += crystalValue[2];
+		$("#score").text(score);
+	});
+
+	$("#red").on("click", function () {
+		score += crystalValue[3];
+		$("#score").text(score);
+	});
+
+	} else if (score === match) {
+
+		console.log(score);
+		wins = wins + 1;
+		$("#win").text(wins);
+		reset();
+
+	} else {
+		console.log(match);
+		losses = losses + 1 ;
+		$("#loss").text(losses);
+		reset();
+
+	};
+});
+
+reset();
